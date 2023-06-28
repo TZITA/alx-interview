@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """ Pascal's Triangle """
 
+
 def pascal_triangle(n):
     """
     Returns a list of lists of integers representing
@@ -14,8 +15,9 @@ def pascal_triangle(n):
             if j < 2:
                 arrayNew.append(1)
             else:
-                arrayNew.insert((j - 1), (array[i - 1][j - 2] + array[i - 1][j - 1]))
+                arrayNew.insert((j - 1),
+                                (array[i - 1][j - 2] + array[i - 1][j - 1]))
 
         array.append(arrayNew)
-    
+
     return array
