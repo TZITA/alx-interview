@@ -10,7 +10,7 @@ def canUnlockAll(boxes):
     for i in range(len(boxes)):
         for j in range(len(boxes[i])):
             if boxes[i][j] != i:
-                keys.add(i)
+                keys.add(boxes[i][j])
 
     if (len(keys) >= len(boxes) - 1):
         return True
