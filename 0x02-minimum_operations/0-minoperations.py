@@ -8,7 +8,7 @@ def minOperations(n):
     prime_factors = []
     minOp = 0
 
-    if n == 0 or n == 1 or type(n) != int:
+    if n < 2 or type(n) != int:
         return 0
 
     while n % 2 == 0:
