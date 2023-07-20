@@ -15,7 +15,7 @@ l_500 = 0
 for i, line in enumerate(sys.stdin, 1):
     log_parts = line.split()
 
-    if len(log_parts) != 9:
+    if len(log_parts) != 9 or parts[6] != '"GET' or parts[8] != 'HTTP/1.1"':
         continue
 
     status_c = int(log_parts[7])
