@@ -15,6 +15,9 @@ l_500 = 0
 for i, line in enumerate(sys.stdin, 1):
     log_parts = line.split()
 
+    if len(log_parts) != 9:
+        continue
+
     status_c = int(log_parts[7])
     file_size += int(line.split()[8])
 
