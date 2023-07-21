@@ -15,8 +15,7 @@ l_500 = 0
 for i, line in enumerate(sys.stdin, 1):
     log_parts = line.split()
 
-    if len(log_parts) != 9 or
-    type(log_parts[7]) != int or
+    if len(log_parts) != 9 or type(log_parts[7]) != int or
     type(log_parts[8]) != int:
         continue
 
