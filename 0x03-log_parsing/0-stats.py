@@ -15,12 +15,13 @@ l_500 = 0
 for i, line in enumerate(sys.stdin, 1):
     log_parts = line.split()
 
-    if len(log_parts) != 9 or type(log_parts[7]) != int or
-    type(log_parts[8]) != int:
+    if len(log_parts) != 9:
         continue
-
-    status_c = int(log_parts[7])
-    file_size += int(line.split()[8])
+    try:
+        status_c = int(log_parts[7])
+        file_size += int(line.split()[8])
+    except ValueError:
+        continue
 
     if status_c == 200:
         l_200 += 1
