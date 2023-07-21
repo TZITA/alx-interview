@@ -15,7 +15,7 @@ l_500 = 0
 for i, line in enumerate(sys.stdin, 1):
     log_parts = line.split()
 
-    if len(log_parts) != 9 or type(log_parts[0]) is str:
+    if len(log_parts) != 9:
         continue
     try:
         status_c = int(log_parts[7])
