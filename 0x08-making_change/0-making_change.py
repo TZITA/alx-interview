@@ -7,7 +7,7 @@ def makeChange(coins, total):
     Returns the fewest number of coins needed
     to meet a given amount total.
     """
-    if total == 0:
+    if total <= 0:
         return 0
 
     sorted_coins = sorted(coins)
