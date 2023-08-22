@@ -18,7 +18,7 @@ def makeChange(coins, total):
     except Exception:
         return -1
 
-    for i in range(1, coins):
+    for i in range(1, coins + 1):
         num_each_coin = int(total / sorted_coins[coins - i])
         num_coins += num_each_coin
         total -= (num_each_coin * sorted_coins[coins - i])
