@@ -9,8 +9,8 @@ def island_perimeter(grid):
     sides_3 = 0
     sides_4 = 0
 
-    for i in range(1, len(grid) - 1):
-        for j in range(1, len(grid[i]) - 1):
+    for i in range(len(grid)):
+        for j in range(len(grid[i])):
             sides = 0
             if grid[i][j] == 1:
                 # check the surrounding
@@ -27,11 +27,11 @@ def island_perimeter(grid):
                     sides_4 += 1
                 # one square in contact with only one square
                 # contributes 3 units in the perimeter
-                if sides == 3:
+                elif sides == 3:
                     sides_3 += 1
                 # one square in contact with two squares
                 # contributes 2 units in the perimeter
-                if sides == 2:
+                elif sides == 2:
                     sides_2 += 1
 
     return ((sides_4 * 4) + (sides_3 * 3) + (sides_2 * 2))
