@@ -22,6 +22,8 @@ def island_perimeter(grid):
                 if grid[i][j - 1] == 0:
                     sides += 1
 
+                if sides == 4:
+                    sides_4 += 1
                 # one square in contact with only one square
                 # contributes 3 units in the perimeter
                 if sides == 3:
@@ -31,4 +33,4 @@ def island_perimeter(grid):
                 if sides == 2:
                     sides_2 += 1
 
-    return ((sides_3 * 3) + (sides_2 * 2))
+    return ((sides_4 * 4) + (sides_3 * 3) + (sides_2 * 2))
