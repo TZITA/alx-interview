@@ -23,7 +23,7 @@ def island_perimeter(grid):
                 except IndexError:
                     sides += 1
                 try:
-                    if grid[i - 1][j] == 0:
+                    if grid[i - 1][j] == 0 and i != 0:
                         sides += 1
                 except IndexError:
                     sides += 1
@@ -33,7 +33,7 @@ def island_perimeter(grid):
                 except IndexError:
                     sides += 1
                 try:
-                    if grid[i][j - 1] == 0:
+                    if grid[i][j - 1] == 0 and j != 0:
                         sides += 1
                 except IndexError:
                     sides += 1
